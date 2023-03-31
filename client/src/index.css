@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Google Sans';
+  src: url(./assets/fonts/Google\ Sans.woff2);
+}
+
+body {
+  margin: 0;
+  font-family: 'Google Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
