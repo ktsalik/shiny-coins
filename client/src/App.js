@@ -24,12 +24,18 @@ function App() {
     <div className="App">
       Shiny Coins
       {JSON.stringify(apiTestResponse)}
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Navigate to="/coins" replace={true} />}></Route>
-          <Route path="/coins" element={<Coins />}></Route>
-        </Routes>
-      </BrowserRouter>
+      <header>Header</header>
+
+      <main>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Navigate to="/coins" replace={true} />}></Route>
+            <Route path="/coins" element={<Coins />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </main>
+
+      <footer>Footer</footer>
     </div>
   );
 }

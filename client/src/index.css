@@ -3,6 +3,10 @@
   src: url(./assets/fonts/Google\ Sans.woff2);
 }
 
+html, body, #root {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: 'Google Sans', sans-serif;
