@@ -1,6 +1,6 @@
 const apiDetails = (req, res) => {
   res.json({
-    name: 'Shiny Coin API',
+    name: 'Shiny Coins API',
     version: '0.0.1',
   });
 };
