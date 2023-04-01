@@ -20,7 +20,7 @@ const Header = (props) => {
           {
             coinsApiOnHold && <Fragment>
               <FontAwesomeIcon icon={faCirclePause}  fa="lg" />
-              <span>Coins API is on hold</span>
+              <span>Coins API on hold</span>
             </Fragment>
           }
         </div>
