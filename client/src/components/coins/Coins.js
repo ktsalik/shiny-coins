@@ -7,7 +7,7 @@ const Coins = (props) => {
 
   const data = useSelector((state) => state.coins.data);
   const page = useSelector((state) => state.coins.page);
-  const apiOnHold = useSelector((state) => state.coins.apiOnHold);
+  const coinsApiOnHold = useSelector((state) => state.coins.apiOnHold);
 
   const loadMore = () => {
     store.dispatch(coinsSlice.actions.fetchData({ page: page + 1 }));
@@ -17,16 +17,18 @@ const Coins = (props) => {
     <div className="Coins">
       <div className="list">
         {
-          data.map((coin) => {
+          data.map((coin, i) => {
             return (
-              <div>{coin.name}</div>
+              <div key={i}>
+                {coin.name}
+              </div>
             );
           })
         }
       </div>
 
       {
-        apiOnHold === false && <button
+        coinsApiOnHold === false && <button
           onClick={loadMore}
         >
           Load More
