@@ -1,0 +1,60 @@
+@import '../../variables.scss';
+
+.CoinItem {
+  padding: 50px;
+  border-radius: 5px;
+  background-color: $component-background-color;
+  color: $component-text-color;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .naming-info {
+      display: flex;
+      align-items: center;
+
+      .symbol-wrapper {
+        min-width: 50px;
+        text-align: right;
+
+        .symbol {
+          padding: 3px 8px;
+          border-radius: 27px;
+          background-color: $primary-color;
+          font-size: 14px;
+          color: $primary-color-text;
+        }
+      }
+
+      .name {
+        margin-left: 10px;
+      }
+    }
+
+    .change-percentage {
+      font-size: 14px;
+
+      span {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+
+      .label {
+        font-size: 11px;
+      }
+    }
+  }
+}

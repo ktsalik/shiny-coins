@@ -1,5 +1,6 @@
 import coinsSlice from '../../store/coins/coinsSlice';
 import store from '../../store/store';
+import CoinList from '../coin-list/CoinList';
 import './Coins.scss';
 import { useSelector } from 'react-redux';
 
@@ -15,17 +16,7 @@ const Coins = (props) => {
 
   return (
     <div className="Coins">
-      <div className="list">
-        {
-          data.map((coin, i) => {
-            return (
-              <div key={i}>
-                {coin.name}
-              </div>
-            );
-          })
-        }
-      </div>
+      <CoinList data={data}></CoinList>
 
       {
         coinsApiOnHold === false && <button
