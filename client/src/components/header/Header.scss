@@ -1,0 +1,27 @@
+@import '../../variables.scss';
+
+.Header {
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+  .content {
+    width: 1180px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      svg {
+        color: $primary-color;
+      }
+
+      span {
+        margin-left: 10px;
+        font-size: 18px;
+        color: $primary-color;
+      }
+    }
+  }
+}

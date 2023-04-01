@@ -8,6 +8,7 @@ import {
 import Coins from './components/coins/Coins';
 import { useContext, useEffect, useState } from 'react';
 import { RequestContext } from './context/requestProvider';
+import Header from './components/header/Header';
 
 function App() {
   const [apiTestResponse, setApiTestResponse] = useState(null);
@@ -22,9 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      Shiny Coins
-      {JSON.stringify(apiTestResponse)}
-      <header>Header</header>
+      <Header></Header>
 
       <main>
         <BrowserRouter>
@@ -34,8 +33,6 @@ function App() {
           </Routes>
         </BrowserRouter>
       </main>
-
-      <footer>Footer</footer>
     </div>
   );
 }
