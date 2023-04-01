@@ -1,8 +1,12 @@
 import './Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoins } from '@fortawesome/free-solid-svg-icons';
+import { faCirclePause, faCoins } from '@fortawesome/free-solid-svg-icons';
+import { useSelector } from 'react-redux';
+import { Fragment } from 'react';
 
 const Header = (props) => {
+
+  const coinsApiOnHold = useSelector((state) => state.coins.apiOnHold);
 
   return (
     <header>
@@ -10,6 +14,15 @@ const Header = (props) => {
         <div className="logo">
           <FontAwesomeIcon icon={faCoins} size="2x" />
           <span>Shiny Coins</span>
+        </div>
+
+        <div className="api-status">
+          {
+            coinsApiOnHold && <Fragment>
+              <FontAwesomeIcon icon={faCirclePause}  fa="lg" />
+              <span>Coins API is on hold</span>
+            </Fragment>
+          }
         </div>
       </div>
     </header>
