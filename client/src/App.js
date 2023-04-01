@@ -6,25 +6,21 @@ import {
   Routes,
 } from "react-router-dom";
 import Coins from './components/coins/Coins';
-import { useContext, useEffect, useState } from 'react';
-import { RequestContext } from './context/requestProvider';
+import { useEffect } from 'react';
 import Header from './components/header/Header';
+import store from './store/store';
+import coinsSlice from './store/coins/coinsSlice';
 
 function App() {
-  const [apiTestResponse, setApiTestResponse] = useState(null);
 
-  const request = useContext(RequestContext);
-  
   useEffect(() => {
-    request.get('/').then((response) => {
-      setApiTestResponse(response.data);
-    });
+    store.dispatch(coinsSlice.actions.fetchData({ page: 1 }));
   }, []);
 
   return (
     <div className="App">
       <Header></Header>
-
+      
       <main>
         <BrowserRouter>
           <Routes>

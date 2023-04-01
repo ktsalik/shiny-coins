@@ -7,13 +7,17 @@ import {
   RequestContext,
   requestInstance,
 } from './context/requestProvider';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RequestContext.Provider value={requestInstance}>
-      <App />
-    </RequestContext.Provider>
+    <Provider store={store}>
+      <RequestContext.Provider value={requestInstance}>
+        <App />
+      </RequestContext.Provider>
+    </Provider>
   </React.StrictMode>
 );
 
