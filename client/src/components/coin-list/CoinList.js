@@ -5,7 +5,7 @@ const CoinList = (props) => {
 
   return (
     <div className="CoinList">
-      {props.data.map((coin) => <CoinItem data={coin}></CoinItem>)}
+      {props.data.map((coin, i) => <CoinItem key={i} data={coin}></CoinItem>)}
     </div>
   );
 };
