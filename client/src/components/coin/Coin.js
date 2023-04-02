@@ -10,6 +10,7 @@ import ThemeContext from '../../context/themeProvider';
 const Coin = (props) => {
   const [fetchingData, setFetchingData] = useState(false);
   const [data, setData] = useState(null);
+  const [showApiOnHoldMessage, setShowApiOnHoldMessage] = useState(false);
 
   const { theme } = useContext(ThemeContext);
   const request = useContext(RequestContext);
@@ -22,7 +23,10 @@ const Coin = (props) => {
     request.get(`coins/${params.coinId}`).then((response) => {
       if (response.data.name) {
         setData(response.data);
+      } else if (response.data.status && response.data.status.error_code === 429) {
+        setShowApiOnHoldMessage(true);
       }
+
       setFetchingData(false);
     });
   }, []);
@@ -99,6 +103,12 @@ const Coin = (props) => {
           <div className="stats-skeleton-item"></div>
           <div className="description-skeleton-item"></div>
         </>
+      }
+
+      {
+        !fetchingData && showApiOnHoldMessage && <span>
+          Coins API is on hold. Please try again in 5 minutes.
+        </span>
       }
     </div>
   );
