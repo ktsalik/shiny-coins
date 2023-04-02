@@ -5,7 +5,7 @@
   border-radius: 5px;
   background-color: $component-background-color;
   color: $component-text-color;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  box-shadow: $component-box-shadow;
 
   .header {
     display: flex;
@@ -31,14 +31,6 @@
 
       .name {
         margin-left: 10px;
-      }
-    }
-
-    .change-percentage {
-      font-size: 14px;
-
-      span {
-        margin-left: 5px;
       }
     }
   }

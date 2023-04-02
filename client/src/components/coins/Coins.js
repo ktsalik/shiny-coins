@@ -12,8 +12,10 @@ const Coins = (props) => {
   const coinsApiOnHold = useSelector((state) => state.coins.apiOnHold);
 
   useEffect(() => {
-    store.dispatch(coinsSlice.actions.fetchData({ page: 1 }));
-  }, []);
+    if (page === 0) {
+      store.dispatch(coinsSlice.actions.fetchData({ page: 1 }));
+    }
+  }, [page]);
 
   const loadMore = () => {
     store.dispatch(coinsSlice.actions.fetchData({ page: page + 1 }));

@@ -1,0 +1,92 @@
+@import '../../variables.scss';
+
+.Coin {
+  width: calc(1180px - 50px - 50px);
+  max-width: calc(100% - 50px - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 50px;
+
+  .name {
+    margin: 0;
+  }
+
+  .prices {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: $component-background-color;
+    color: $component-text-color;
+    box-shadow: $component-box-shadow;
+
+    .header {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-left: 5px;
+        font-size: 14px;
+      }
+    }
+
+    .values {
+      display: flex;
+      margin-left: 10px;
+
+      & > * {
+        margin: 0 25px;
+
+        .label {
+          font-size: 11px;
+        }
+      }
+
+      .highest {
+
+        .value {
+          font-weight: bold;
+        }
+      }
+
+      .lower {
+
+        .value {
+          color: $muted-text-color;
+        }
+      }
+    }
+  }
+
+  .stats {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+
+    .header {
+      display: flex;
+
+      & > * {
+        flex: 1;
+        font-size: 11px;
+      }
+    }
+
+    .values {
+      display: flex;
+
+      .ChangePercentage {
+        flex: 1;
+      }
+    }
+  }
+
+  .description {
+    margin: 0;
+    margin-top: 50px;
+  }
+}

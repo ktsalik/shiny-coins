@@ -15,12 +15,12 @@ const getCoins = async (req, res) => {
         id: record.id,
         name: record.name,
         symbol: record.symbol,
-        currentPrice: record.current_price,
         price: {
+          current: record.current_price,
           highest: record.high_24h,
           lower: record.low_24h,
-          changePercentage: record.price_change_percentage_24h,
         },
+        priceChangePercentage: record.price_change_percentage_24h,
       };
     });
 
@@ -30,6 +30,39 @@ const getCoins = async (req, res) => {
   }
 };
 
+const getCoin = async (req, res) => {
+  const coinId = req.params.coinId;
+
+  const remoteApiResponse = await fetch(`https://api.coingecko.com/api/v3/coins/${coinId}?localization=en&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`);
+  const data = await remoteApiResponse.json();
+
+  if (data.id) {
+    const coinData = {
+      name: data.name,
+      description: data.description.en,
+      price: {
+        current: data.market_data.current_price.usd,
+        highest: data.market_data.high_24h.usd,
+        lower: data.market_data.low_24h.usd,
+      },
+      priceChange: [
+        data.market_data.price_change_percentage_24h_in_currency.usd,
+        data.market_data.price_change_percentage_7d_in_currency.usd,
+        data.market_data.price_change_percentage_14d_in_currency.usd,
+        data.market_data.price_change_percentage_30d_in_currency.usd,
+        data.market_data.price_change_percentage_60d_in_currency.usd,
+        data.market_data.price_change_percentage_200d_in_currency.usd,
+        data.market_data.price_change_percentage_1y_in_currency.usd,
+      ],
+    };
+
+    res.json(coinData);
+  } else {
+    res.json(data);
+  }
+};
+
 module.exports = {
   getCoins,
+  getCoin,
 };

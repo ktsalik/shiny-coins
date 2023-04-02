@@ -7,9 +7,9 @@ import {
 } from "react-router-dom";
 import Coins from './components/coins/Coins';
 import Header from './components/header/Header';
+import Coin from './components/coin/Coin';
 
 function App() {
-
 
   return (
     <div className="App">
@@ -19,7 +19,10 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Navigate to="/coins" replace={true} />}></Route>
-            <Route path="/coins" element={<Coins />}></Route>
+            <Route path="/coins">
+              <Route index element={<Coins />}></Route>
+              <Route path=":coinId" element={<Coin />}></Route>
+            </Route>
           </Routes>
         </BrowserRouter>
       </main>

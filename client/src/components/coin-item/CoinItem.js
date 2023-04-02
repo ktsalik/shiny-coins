@@ -1,6 +1,7 @@
 import './CoinItem.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faArrowDown, faDollar } from '@fortawesome/free-solid-svg-icons';
+import ChangePercentage from '../change-percentage/ChangePercentage';
 
 const CoinItem = (props) => {
 
@@ -15,15 +16,7 @@ const CoinItem = (props) => {
           <span className="name">{props.data.name}</span>
         </div>
 
-        <span className="change-percentage">
-          {
-            props.data.price.changePercentage > 0
-              ? <FontAwesomeIcon icon={faArrowUp} color="#006400" />
-              : <FontAwesomeIcon icon={faArrowDown} color="#8B0000" />
-          }
-
-          <span>{Math.abs(props.data.price.changePercentage)}%</span>
-        </span>
+        <ChangePercentage value={props.data.priceChangePercentage}></ChangePercentage>
       </div>
 
       <div className="price">
@@ -31,7 +24,7 @@ const CoinItem = (props) => {
           <span className="label">Current</span>
           <div className="value">
             <FontAwesomeIcon icon={faDollar} size="xs"/>
-            <span>{props.data.currentPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+            <span>{props.data.price.current.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
           </div>
         </div>
 
