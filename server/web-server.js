@@ -21,8 +21,8 @@ class WebServer {
     this.app.get('/', (req, res) => {
       res.sendFile(__dirname + '/public/index.html');
     });
-    this.app.get('/coins', getCoins);
-    this.app.get('/coins/:coinId', getCoin);
+    this.app.get('api/coins', getCoins);
+    this.app.get('api/coins/:coinId', getCoin);
 
     // no route found
     this.app.use((req, res) => {
