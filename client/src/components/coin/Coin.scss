@@ -154,18 +154,22 @@
   }
 
   .name-skeleton-item {
+    @include dark-skeleton();
     background-color: $dark-skeleton-color;
   }
 
   .prices-skeleton-item {
+    @include dark-skeleton();
     background-color: $dark-skeleton-color;
   }
 
   .stats-skeleton-item {
+    @include dark-skeleton();
     background-color: $dark-skeleton-color;
   }
 
   .description-skeleton-item {
+    @include dark-skeleton();
     background-color: $dark-skeleton-color;
   }
 }
@@ -196,18 +200,22 @@
   }
 
   .name-skeleton-item {
+    @include cs-skeleton();
     background-color: $cyberscope-skeleton-color;
   }
 
   .prices-skeleton-item {
+    @include cs-skeleton();
     background-color: $cyberscope-skeleton-color;
   }
 
   .stats-skeleton-item {
+    @include cs-skeleton();
     background-color: $cyberscope-skeleton-color;
   }
 
   .description-skeleton-item {
+    @include cs-skeleton();
     background-color: $cyberscope-skeleton-color;
   }
 }
