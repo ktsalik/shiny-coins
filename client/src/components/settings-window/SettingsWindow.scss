@@ -48,16 +48,19 @@
 
       .btn-light-theme {
         background-color: $component-background-color;
+        border: 1px solid $primary-color;
         color: $primary-color;
       }
 
       .btn-dark-theme {
         background-color: $dark-component-background-color;
+        border: 1px solid $dark-primary-color;
         color: $dark-primary-color;
       }
     
       .btn-cyberscope-theme {
         background-color: $cyberscope-component-background-color;
+        border: 1px solid $cyberscope-primary-color;
         color: $cyberscope-primary-color;
       }
     }
