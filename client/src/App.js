@@ -6,16 +6,10 @@ import {
   Routes,
 } from "react-router-dom";
 import Coins from './components/coins/Coins';
-import { useEffect } from 'react';
 import Header from './components/header/Header';
-import store from './store/store';
-import coinsSlice from './store/coins/coinsSlice';
 
 function App() {
 
-  useEffect(() => {
-    store.dispatch(coinsSlice.actions.fetchData({ page: 1 }));
-  }, []);
 
   return (
     <div className="App">
