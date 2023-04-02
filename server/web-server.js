@@ -1,7 +1,11 @@
-const express = require('express');
-const cors = require('cors');
-const { apiDetails } = require('./controllers/AppController.js');
-const { getCoins, getCoin } = require('./controllers/CoinsController.js');
+import express from 'express';
+import cors from 'cors';
+import { getCoins, getCoin } from './controllers/CoinsController.js';
+import path from 'path';
+import {fileURLToPath} from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 class WebServer {
   app = null;
@@ -33,4 +37,4 @@ class WebServer {
   }
 }
 
-module.exports = WebServer;
+export default WebServer;

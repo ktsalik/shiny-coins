@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "A server for shiny-coins app and as a middleware to coingkeco api",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/ktsalik/shiny-coins#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.1"
   }
 }

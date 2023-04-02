@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 const getCoins = async (req, res) => {
   let page = 1;
 
@@ -62,7 +64,7 @@ const getCoin = async (req, res) => {
   }
 };
 
-module.exports = {
+export {
   getCoins,
   getCoin,
 };
