@@ -3,15 +3,23 @@
 .Coins {
   width: 1180px;
   max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
+  padding: 40px;
 
   .CoinList {
-    padding: 40px;
 
     .CoinItem {
       width: 325px;
       max-width: 100%;
       margin: 50px auto;
     }
+  }
+
+  .btn-load-more {
+    @include button();
+    width: 425px;
   }
 }

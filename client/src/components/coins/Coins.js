@@ -27,6 +27,7 @@ const Coins = (props) => {
 
       {
         coinsApiOnHold === false && <button
+          className="btn-load-more"
           onClick={loadMore}
         >
           Load More
