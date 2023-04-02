@@ -19,6 +19,11 @@ class WebServer {
     });
     this.app.get('/coins', getCoins);
     this.app.get('/coins/:coinId', getCoin);
+
+    // no route found
+    this.app.use((req, res) => {
+      res.sendFile(__dirname + '/public/index.html');
+    });
   }
 
   start(port = 3001) {
