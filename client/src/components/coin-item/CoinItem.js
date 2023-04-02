@@ -1,6 +1,6 @@
 import './CoinItem.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp, faArrowDown, faDollar } from '@fortawesome/free-solid-svg-icons';
 
 const CoinItem = (props) => {
 
@@ -29,17 +29,26 @@ const CoinItem = (props) => {
       <div className="price">
         <div className="current">
           <span className="label">Current</span>
-          <span className="value">${props.data.currentPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+          <div className="value">
+            <FontAwesomeIcon icon={faDollar} size="xs"/>
+            <span>{props.data.currentPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+          </div>
         </div>
 
         <div className="highest">
           <span className="label">Highest</span>
-          <span className="value">${props.data.price.highest.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+          <div className="value">
+            <FontAwesomeIcon icon={faDollar} size="xs"/>
+            <span>{props.data.price.highest.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+          </div>
         </div>
         
         <div className="lower">
           <span className="label">Lower</span>
-          <span classname="value">${props.data.price.lower.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+          <div className="value">
+            <FontAwesomeIcon icon={faDollar} size="xs"/>
+            <span>{props.data.price.lower.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+          </div>
         </div>
       </div>
     </div>
