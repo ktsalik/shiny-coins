@@ -89,4 +89,41 @@
     margin: 0;
     margin-top: 50px;
   }
+
+  .name-skeleton-item {
+    @include skeleton();
+    width: 425px;
+    max-width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    background-color: $skeleton-color;
+  }
+
+  .prices-skeleton-item {
+    @include skeleton();
+    width: 525px;
+    max-width: 100%;
+    height: 70px;
+    margin-top: 30px;
+    border-radius: 5px;
+    background-color: $skeleton-color;
+  }
+
+  .stats-skeleton-item {
+    @include skeleton();
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+    border-radius: 5px;
+    background-color: $skeleton-color;
+  }
+
+  .description-skeleton-item {
+    @include skeleton();
+    width: 100%;
+    height: 200px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: $skeleton-color;
+  }
 }

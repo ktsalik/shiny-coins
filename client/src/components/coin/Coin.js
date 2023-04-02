@@ -7,6 +7,7 @@ import { faClock, faDollar } from '@fortawesome/free-solid-svg-icons';
 import ChangePercentage from '../change-percentage/ChangePercentage';
 
 const Coin = (props) => {
+  const [fetchingData, setFetchingData] = useState(false);
   const [data, setData] = useState(null);
 
   const request = useContext(RequestContext);
@@ -14,15 +15,20 @@ const Coin = (props) => {
   const params = useParams();
 
   useEffect(() => {
+    setFetchingData(true);
+
     request.get(`coins/${params.coinId}`).then((response) => {
-      setData(response.data);
+      if (response.data.name) {
+        setData(response.data);
+      }
+      setFetchingData(false);
     });
   }, []);
 
   return (
     <div className="Coin">
       {
-        data && <>
+        !fetchingData && data && <>
           <h1 className="name">{data.name}</h1>
 
           <div className="prices">
@@ -81,6 +87,15 @@ const Coin = (props) => {
           </div>
 
           <p className="description" dangerouslySetInnerHTML={{ __html: data.description}}></p>
+        </>
+      }
+
+      {
+        fetchingData && <>
+          <div className="name-skeleton-item"></div>
+          <div className="prices-skeleton-item"></div>
+          <div className="stats-skeleton-item"></div>
+          <div className="description-skeleton-item"></div>
         </>
       }
     </div>
