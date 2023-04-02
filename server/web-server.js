@@ -13,7 +13,10 @@ class WebServer {
   init() {
     this.app = express();
     this.app.use(cors());
-    this.app.get('/', apiDetails);
+    this.app.use(express.static(__dirname + '/public'));
+    this.app.get('/', (req, res) => {
+      res.sendFile(__dirname + '/public/index.html');
+    });
     this.app.get('/coins', getCoins);
     this.app.get('/coins/:coinId', getCoin);
   }
