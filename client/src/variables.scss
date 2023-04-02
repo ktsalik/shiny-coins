@@ -8,6 +8,26 @@ $component-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 
 $muted-text-color: #777777;
 $skeleton-color: #CCCCCC;
 
+$dark-app-background-color: #2F2F2F;
+$dark-app-text-color: #EEEEEE;
+$dark-primary-color: #EFEFEF;
+$dark-primary-color-text: #333333;
+$dark-component-background-color: #303030;
+$dark-component-text-color: #EFEFEF;
+$dark-component-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+$dark-muted-text-color: #999999;
+$dark-skeleton-color: #444444;
+
+$cyberscope-app-background-color: #00142C;
+$cyberscope-app-text-color: #EEEEEE;
+$cyberscope-primary-color: #0EC9AC;
+$cyberscope-primary-color-text: #00234E;
+$cyberscope-component-background-color: #00234E;
+$cyberscope-component-text-color: #EEEEEE;
+$cyberscope-component-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+$cyberscope-muted-text-color: #999999;
+$cyberscope-skeleton-color: #00234E;
+
 @mixin button() {
   outline: none;
   border: none;
@@ -17,10 +37,21 @@ $skeleton-color: #CCCCCC;
   color: $primary-color-text;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   cursor: pointer;
+
+  &.dark {
+    background-color: $dark-primary-color;
+    color: $dark-primary-color-text;
+  }
+
+  &.cyberscope {
+    background-color: $cyberscope-primary-color;
+    color: $cyberscope-primary-color-text;
+  }
 }
 
 @mixin skeleton() {
   position: relative;
+  overflow: hidden;
   
   &::after {
     position: absolute;

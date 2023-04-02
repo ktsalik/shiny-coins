@@ -4,6 +4,7 @@ import store from '../../store/store';
 import CoinList from '../coin-list/CoinList';
 import './Coins.scss';
 import { useSelector } from 'react-redux';
+import Button from '../button/Button';
 
 const Coins = (props) => {
 
@@ -26,12 +27,12 @@ const Coins = (props) => {
       <CoinList data={data}></CoinList>
 
       {
-        coinsApiOnHold === false && <button
+        coinsApiOnHold === false && <Button
           className="btn-load-more"
           onClick={loadMore}
         >
           Load More
-        </button>
+        </Button>
       }
     </div>
   );

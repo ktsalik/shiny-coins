@@ -128,6 +128,90 @@
   }
 }
 
+.Coin.dark {
+
+  .prices {
+    background-color: $dark-component-background-color;
+    color: $dark-component-text-color;
+    box-shadow: none;
+
+    .values {
+
+      .lower {
+
+        .value {
+          color: $dark-muted-text-color;
+        }
+      }
+    }
+  }
+
+  .description {
+    
+    a {
+      color: $dark-app-text-color;
+    }
+  }
+
+  .name-skeleton-item {
+    background-color: $dark-skeleton-color;
+  }
+
+  .prices-skeleton-item {
+    background-color: $dark-skeleton-color;
+  }
+
+  .stats-skeleton-item {
+    background-color: $dark-skeleton-color;
+  }
+
+  .description-skeleton-item {
+    background-color: $dark-skeleton-color;
+  }
+}
+
+.Coin.cyberscope {
+
+  .prices {
+    background-color: $cyberscope-component-background-color;
+    color: $cyberscope-component-text-color;
+    box-shadow: none;
+
+    .values {
+
+      .lower {
+
+        .value {
+          color: $cyberscope-muted-text-color;
+        }
+      }
+    }
+  }
+
+  .description {
+    
+    a {
+      color: $cyberscope-app-text-color;
+    }
+  }
+
+  .name-skeleton-item {
+    background-color: $cyberscope-skeleton-color;
+  }
+
+  .prices-skeleton-item {
+    background-color: $cyberscope-skeleton-color;
+  }
+
+  .stats-skeleton-item {
+    background-color: $cyberscope-skeleton-color;
+  }
+
+  .description-skeleton-item {
+    background-color: $cyberscope-skeleton-color;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .Coin {
     max-width: calc(100% - 30px - 30px);

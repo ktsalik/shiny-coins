@@ -2,11 +2,15 @@ import './CoinItem.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faArrowDown, faDollar } from '@fortawesome/free-solid-svg-icons';
 import ChangePercentage from '../change-percentage/ChangePercentage';
+import { useContext } from 'react';
+import ThemeContext from '../../context/themeProvider';
 
 const CoinItem = (props) => {
 
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <div className="CoinItem">
+    <div className={`CoinItem ${theme}`}>
       <div className="header">
         <div className="naming-info">
           <div className="symbol-wrapper">

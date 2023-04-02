@@ -8,7 +8,11 @@ header {
   padding: 20px;
   background-color: $app-background-color;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  z-index: 999;
+  z-index: 997;
+
+  &.blurred {
+    filter: blur(2px);
+  }
 
   .content {
     width: 1180px;
@@ -37,6 +41,47 @@ header {
 
       span {
         margin-left: 5px;
+      }
+    }
+
+    .btn-settings {
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+}
+
+header.dark {
+  background-color: $dark-app-background-color;
+
+  .content {
+
+    .logo {
+
+      svg {
+        color: $dark-primary-color;
+      }
+
+      span {
+        color: $dark-primary-color;
+      }
+    }
+  }
+}
+
+header.cyberscope {
+  background-color: $cyberscope-app-background-color;
+
+  .content {
+
+    .logo {
+
+      svg {
+        color: $cyberscope-primary-color;
+      }
+
+      span {
+        color: $cyberscope-primary-color;
       }
     }
   }

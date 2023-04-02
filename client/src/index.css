@@ -13,3 +13,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.d-flex {
+  display: flex !important;
+}
+
+.ml-3 {
+  margin-left: 30px !important;
+}

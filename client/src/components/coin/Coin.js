@@ -5,11 +5,13 @@ import { RequestContext } from '../../context/requestProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faDollar } from '@fortawesome/free-solid-svg-icons';
 import ChangePercentage from '../change-percentage/ChangePercentage';
+import ThemeContext from '../../context/themeProvider';
 
 const Coin = (props) => {
   const [fetchingData, setFetchingData] = useState(false);
   const [data, setData] = useState(null);
 
+  const { theme } = useContext(ThemeContext);
   const request = useContext(RequestContext);
 
   const params = useParams();
@@ -26,7 +28,7 @@ const Coin = (props) => {
   }, []);
 
   return (
-    <div className="Coin">
+    <div className={`Coin ${theme}`}>
       {
         !fetchingData && data && <>
           <h1 className="name">{data.name}</h1>

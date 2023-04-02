@@ -52,6 +52,46 @@
   }
 }
 
+.CoinItem.dark {
+  background-color: $dark-component-background-color;
+  color: $dark-component-text-color;
+  box-shadow: none;
+
+  .header {
+
+    .naming-info {
+
+      .symbol-wrapper {
+
+        .symbol {
+          background-color: $dark-primary-color;
+          color: $dark-primary-color-text;
+        }
+      }
+    }
+  }
+}
+
+.CoinItem.cyberscope {
+  background-color: $cyberscope-component-background-color;
+  color: $cyberscope-component-text-color;
+  box-shadow: none;
+
+  .header {
+
+    .naming-info {
+
+      .symbol-wrapper {
+
+        .symbol {
+          background-color: $cyberscope-primary-color;
+          color: $cyberscope-primary-color-text;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 425px) {
   .CoinItem {
     max-width: calc(100% - 30px - 30px);

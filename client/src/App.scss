@@ -9,7 +9,26 @@
   background-color: $app-background-color;
   color: $app-text-color;
 
+  &.disable-scroll {
+    max-height: calc(100vh - 72px);
+    overflow: hidden;
+  }
+
   main {
     flex: 1;
+
+    &.blurred {
+      filter: blur(2px);
+    }
   }
+}
+
+.App.dark {
+  background-color: $dark-app-background-color;
+  color: $dark-app-text-color;
+}
+
+.App.cyberscope {
+  background-color: $cyberscope-app-background-color;
+  color: $cyberscope-app-text-color;
 }

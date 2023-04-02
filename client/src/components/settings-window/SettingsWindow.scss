@@ -1,0 +1,87 @@
+@import '../../variables.scss';
+
+.SettingsWindow {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 998;
+
+  &.open {
+    display: flex;
+  }
+
+  .theme-tool {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 100px;
+    border-radius: 10px;
+    background-color: $component-background-color;
+    color: $component-text-color;
+
+    .btn-times {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .theme-options {
+      display: flex;
+      flex-direction: column;
+
+      button {
+        outline: none;
+        border: none;
+        margin: 20px 0;
+        padding: 15px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .btn-light-theme {
+        background-color: $component-background-color;
+        color: $primary-color;
+      }
+
+      .btn-dark-theme {
+        background-color: $dark-component-background-color;
+        color: $dark-primary-color;
+      }
+    
+      .btn-cyberscope-theme {
+        background-color: $cyberscope-component-background-color;
+        color: $cyberscope-primary-color;
+      }
+    }
+
+    .btn-close {
+      margin-top: 50px;
+    }
+  }
+}
+
+.SettingsWindow.dark {
+
+  .theme-tool {
+
+    background-color: $dark-component-background-color;
+    color: $dark-component-text-color;
+  }
+}
+
+.SettingsWindow.cyberscope {
+
+  .theme-tool {
+
+    background-color: $cyberscope-component-background-color;
+    color: $cyberscope-component-text-color;
+  }
+}
