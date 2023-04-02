@@ -1,4 +1,4 @@
-# Shiny Coins
+# Shiny Coins Client
 
 ## Installation
 ````bash
@@ -10,7 +10,7 @@ npm install
 npm start # starts a local server
 ````
 
-## Deploy
+## Build
 ````bash
 npm run build # outputs to build directory
 ````
