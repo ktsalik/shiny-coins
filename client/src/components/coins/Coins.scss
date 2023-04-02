@@ -1,8 +1,8 @@
 @import '../../variables.scss';
 
 .Coins {
-  width: 1180px;
-  max-width: 100%;
+  width: calc(1180px - 40px - 40px);
+  max-width: calc(100% - 40px - 40px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,10 +10,10 @@
   padding: 40px;
 
   .CoinList {
+    width: 100%;
 
     .CoinItem {
       width: 325px;
-      max-width: 100%;
       margin: 50px auto;
     }
   }
@@ -21,5 +21,13 @@
   .btn-load-more {
     @include button();
     width: 425px;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .Coins {
+    max-width: calc(100% - 20px - 20px);
+    padding: 20px;
   }
 }
