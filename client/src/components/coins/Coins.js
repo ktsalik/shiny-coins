@@ -34,6 +34,10 @@ const Coins = (props) => {
           Load More
         </Button>
       }
+
+      {
+        coinsApiOnHold && <span>Coins API is on hold. Please try again in 5 minutes.</span>
+      }
     </div>
   );
 };
