@@ -18,15 +18,15 @@ $dark-component-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30,
 $dark-muted-text-color: #999999;
 $dark-skeleton-color: #444444;
 
-$cyberscope-app-background-color: #00142C;
-$cyberscope-app-text-color: #EEEEEE;
-$cyberscope-primary-color: #0EC9AC;
-$cyberscope-primary-color-text: #00234E;
-$cyberscope-component-background-color: #00234E;
-$cyberscope-component-text-color: #EEEEEE;
-$cyberscope-component-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-$cyberscope-muted-text-color: #999999;
-$cyberscope-skeleton-color: #00234E;
+$dark-blue-app-background-color: #00142C;
+$dark-blue-app-text-color: #EEEEEE;
+$dark-blue-primary-color: #0EC9AC;
+$dark-blue-primary-color-text: #00234E;
+$dark-blue-component-background-color: #00234E;
+$dark-blue-component-text-color: #EEEEEE;
+$dark-blue-component-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+$dark-blue-muted-text-color: #999999;
+$dark-blue-skeleton-color: #00234E;
 
 @mixin button() {
   outline: none;
@@ -43,9 +43,9 @@ $cyberscope-skeleton-color: #00234E;
     color: $dark-primary-color-text;
   }
 
-  &.cyberscope {
-    background-color: $cyberscope-primary-color;
-    color: $cyberscope-primary-color-text;
+  &.dark-blue {
+    background-color: $dark-blue-primary-color;
+    color: $dark-blue-primary-color-text;
   }
 }
 
@@ -91,10 +91,10 @@ $cyberscope-skeleton-color: #00234E;
   &::after {
     background-image: linear-gradient(
       90deg,
-      rgba($cyberscope-app-background-color, 0) 0,
-      rgba($cyberscope-app-background-color, 0.2) 20%,
-      rgba($cyberscope-app-background-color, 0.5) 60%,
-      rgba($cyberscope-app-background-color, 0)
+      rgba($dark-blue-app-background-color, 0) 0,
+      rgba($dark-blue-app-background-color, 0.2) 20%,
+      rgba($dark-blue-app-background-color, 0.5) 60%,
+      rgba($dark-blue-app-background-color, 0)
     );
   }
 }

@@ -72,9 +72,9 @@
   }
 }
 
-.CoinItem.cyberscope {
-  background-color: $cyberscope-component-background-color;
-  color: $cyberscope-component-text-color;
+.CoinItem.dark-blue {
+  background-color: $dark-blue-component-background-color;
+  color: $dark-blue-component-text-color;
   box-shadow: none;
 
   .header {
@@ -84,8 +84,8 @@
       .symbol-wrapper {
 
         .symbol {
-          background-color: $cyberscope-primary-color;
-          color: $cyberscope-primary-color-text;
+          background-color: $dark-blue-primary-color;
+          color: $dark-blue-primary-color-text;
         }
       }
     }

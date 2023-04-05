@@ -58,10 +58,10 @@
         color: $dark-primary-color;
       }
     
-      .btn-cyberscope-theme {
-        background-color: $cyberscope-component-background-color;
-        border: 1px solid $cyberscope-primary-color;
-        color: $cyberscope-primary-color;
+      .btn-dark-blue-theme {
+        background-color: $dark-blue-component-background-color;
+        border: 1px solid $dark-blue-primary-color;
+        color: $dark-blue-primary-color;
       }
     }
 
@@ -80,11 +80,11 @@
   }
 }
 
-.SettingsWindow.cyberscope {
+.SettingsWindow.dark-blue {
 
   .theme-tool {
 
-    background-color: $cyberscope-component-background-color;
-    color: $cyberscope-component-text-color;
+    background-color: $dark-blue-component-background-color;
+    color: $dark-blue-component-text-color;
   }
 }
