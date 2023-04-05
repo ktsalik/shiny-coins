@@ -69,19 +69,19 @@ header.dark {
   }
 }
 
-header.cyberscope {
-  background-color: $cyberscope-app-background-color;
+header.dark-blue {
+  background-color: $dark-blue-app-background-color;
 
   .content {
 
     .logo {
 
       svg {
-        color: $cyberscope-primary-color;
+        color: $dark-blue-primary-color;
       }
 
       span {
-        color: $cyberscope-primary-color;
+        color: $dark-blue-primary-color;
       }
     }
   }

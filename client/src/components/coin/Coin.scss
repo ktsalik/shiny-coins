@@ -174,11 +174,11 @@
   }
 }
 
-.Coin.cyberscope {
+.Coin.dark-blue {
 
   .prices {
-    background-color: $cyberscope-component-background-color;
-    color: $cyberscope-component-text-color;
+    background-color: $dark-blue-component-background-color;
+    color: $dark-blue-component-text-color;
     box-shadow: none;
 
     .values {
@@ -186,7 +186,7 @@
       .lower {
 
         .value {
-          color: $cyberscope-muted-text-color;
+          color: $dark-blue-muted-text-color;
         }
       }
     }
@@ -195,28 +195,28 @@
   .description {
     
     a {
-      color: $cyberscope-app-text-color;
+      color: $dark-blue-app-text-color;
     }
   }
 
   .name-skeleton-item {
     @include cs-skeleton();
-    background-color: $cyberscope-skeleton-color;
+    background-color: $dark-blue-skeleton-color;
   }
 
   .prices-skeleton-item {
     @include cs-skeleton();
-    background-color: $cyberscope-skeleton-color;
+    background-color: $dark-blue-skeleton-color;
   }
 
   .stats-skeleton-item {
     @include cs-skeleton();
-    background-color: $cyberscope-skeleton-color;
+    background-color: $dark-blue-skeleton-color;
   }
 
   .description-skeleton-item {
     @include cs-skeleton();
-    background-color: $cyberscope-skeleton-color;
+    background-color: $dark-blue-skeleton-color;
   }
 }
 

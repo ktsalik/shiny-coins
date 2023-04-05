@@ -23,7 +23,7 @@ const SettingsWindow = (props) => {
           <span>Choose Theme</span>
           <button className="btn-light-theme" onClick={() => changeTheme('light')}>Light</button>
           <button className="btn-dark-theme" onClick={() => changeTheme('dark')}>Dark</button>
-          <button className="btn-cyberscope-theme" onClick={() => changeTheme('cyberscope')}>Cybercope</button>
+          <button className="btn-dark-blue-theme" onClick={() => changeTheme('dark-blue')}>Dark Blue</button>
         </div>
 
         <Button className="btn-close" onClick={() => props.close()}>Close</Button>
