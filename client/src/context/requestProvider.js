@@ -2,7 +2,7 @@ import axios from 'axios';
 import { createContext } from "react";
 
 const instance = axios.create({
-  baseURL: 'http://localhost:3001/',
+  baseURL: 'https://shinycoins.cyclic.app/api/',
 });
 
 export const requestInstance = instance;
